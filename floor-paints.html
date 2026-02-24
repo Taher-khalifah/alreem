@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دهانات الأرضيات | دهانات الريم</title>
+    <meta name="description" content="دهانات أرضيات متينة وعالية الجودة من دهانات الريم. اطلب عرض سعر الآن!">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="products-data.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 
+                        primary: { 900: '#1a365d', 800: '#1e40af', 700: '#1d4ed8' }, 
+                        accent: { 500: '#C9A227', 600: '#B8922A' },
+                        yellow: { 50: '#FEF9E7', 100: '#FDF3CF', 200: '#FBE8A0', 300: '#F8DC6F', 400: '#F5D03E', 500: '#C9A227', 600: '#B8922A', 700: '#8B6914' }
+                    },
+                    fontFamily: { arabic: ['Cairo', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Cairo', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .header-gradient-bar { background: linear-gradient(90deg, #1a365d 0%, #1e40af 15%, #C9A227 35%, #f4d03f 50%, #C9A227 65%, #1e40af 85%, #1a365d 100%); }
+        .hero-section { position: relative; min-height: 60vh; display: flex; align-items: center; background-size: cover; background-position: center; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(201, 162, 39, 0.92) 0%, rgba(139, 105, 20, 0.88) 100%); }
+        .hover-lift { transition: all 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+        .btn-primary { background: linear-gradient(135deg, #C9A227 0%, #B8922A 100%); }
+        .gradient-text { background: linear-gradient(135deg, #C9A227 0%, #f4d03f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-padding { padding: 80px 0; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #C9A227; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+        .product-image { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body class="font-arabic bg-white" x-data="{ mobileMenuOpen: false }">
+    
+    <!-- Maintenance Mode Check -->
+    <script>
+        // Check if maintenance mode is enabled
+        (function() {
+            const maintenanceMode = localStorage.getItem('maintenance_mode') === 'true';
+            // Only redirect if not coming from admin dashboard
+            const referrer = document.referrer;
+            const isFromAdmin = referrer && referrer.includes('admin-dashboard.html');
+            
+            if (maintenanceMode && !isFromAdmin && !window.location.href.includes('maintenance.html')) {
+                window.location.href = 'maintenance.html';
+            }
+        })();
+    </script>
+
+<nav class="w-full bg-white shadow-lg" dir="rtl">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- الروابط (يمين) -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-black hover:text-yellow-600 font-medium">الرئيسية</a>
+        <a href="index.html#products" class="text-black hover:text-yellow-600 font-medium">المنتجات</a>
+        <a href="contact.html" class="text-black hover:text-yellow-600 font-medium">تواصل معنا</a>
+      </div>
+
+      <!-- اللوقو بالنص -->
+      <div class="flex justify-center flex-1">
+        <a href="index.html">
+          <img src="pic/logo.png" alt="دهانات الريم"
+               class="h-16 object-contain">
+        </a>
+      </div>
+
+      <!-- زر واتساب (يسار) -->
+      <div class="hidden md:flex items-center">
+        <a href="https://wa.me/0502250066" target="_blank"
+           class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2">
+           <i class="fab fa-whatsapp"></i>
+           اطلب عرض سعر
+        </a>
+      </div>
+
+      <!-- زر الجوال -->
+      <button class="md:hidden text-black text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+  <!-- شريط الألوان المتحرك -->
+  <div class="h-3 w-full overflow-hidden">
+    <div class="animated-gradient-line w-full h-full"></div>
+  </div>
+
+  <style>
+    .animated-gradient-line {
+      background: linear-gradient(90deg, #dc2626 0%, #fbbf24 25%, #22c55e 50%, #06b6d4 75%, #dc2626 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: 100% 0; }
+      50% { background-position: 0 0; }
+      100% { background-position: 100% 0; }
+    }
+  </style>
+
+    <section class="hero-section" style="background-image: url('pic/background.png');">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 pt-32 pb-20">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">دهانات الأرضيات <span class="block gradient-text">متانة وجمال</span></h1>
+                <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto">دهانات أرضيات متينة تتحمل الاستخدام اليومي وتدوم لسنوات</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/0502250066?text=أريد%20دهانات%20أرضيات" target="_blank" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3"><i class="fab fa-whatsapp text-2xl"></i>اطلب عرض سعر</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding bg-yellow-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mt-2">دهانات الأرضيات</h2>
+                <p class="text-black mt-4 max-w-2xl mx-auto">تشكيلة متنوعة من الدهانات المتينة للأرضيات</p>
+            </div>
+            <div id="products-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product: معجون إيبوكسي -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-gray-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-fill-drip text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">معجون إيبوكسي</h3>
+                        <p class="text-black text-sm mb-2">Epoxy Putty</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">معجون إيبوكسي عالي الجودة لتسوية الأسطح قبل الطلاء</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">120 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20معجون%20إيبوكسي" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: كولتار إيبوكسي -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-slate-700 rounded-full flex items-center justify-center">
+                            <i class="fas fa-layer-group text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">كولتار إيبوكسي</h3>
+                        <p class="text-black text-sm mb-2">Coltar Epoxy</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">دهان كولتار إيبوكسي مقاوم للمواد الكيميائية والأحماض</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">250 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20كولتار%20إيبوكسي" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: أساس إيبوكسي سولفنت فري -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-paint-roller text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">أساس إيبوكسي سولفنت فري</h3>
+                        <p class="text-black text-sm mb-2">Epoxy Primer Solvent Free</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">أساس إيبوكسي خالٍ من المذيبات صديق للبيئة</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">180 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20أساس%20إيبوكسي%20سولفنت%20فري" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: إيبوكسي سولفنت فري -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-cyan-50 to-cyan-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-cyan-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-tint text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">إيبوكسي سولفنت فري</h3>
+                        <p class="text-black text-sm mb-2">Epoxy Solvent Free</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">دهان إيبوكسي خالٍ من المذيبات للأرضيات الصناعية</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">200 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20إيبوكسي%20سولفنت%20فري" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: ميرور -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs z-10">الأكثر مبيعاً</div>
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-mirror text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">ميرور</h3>
+                        <p class="text-black text-sm mb-2">Mirror</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">دهان ميرور عالي اللمعان للأرضيات الفاخرة</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">350 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20دهان%20ميرور" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: إيبوكسي تانك لاين -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-database text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">إيبوكسي تانك لاين</h3>
+                        <p class="text-black text-sm mb-2">Epoxy Tank Line</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">دهان إيبوكسي خاص لتبطين الخزانات والأرضيات الكيميائية</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">280 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20إيبوكسي%20تانك%20لاين" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: إيبوكسي سولفنت -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-teal-50 to-teal-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-teal-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-flask text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">إيبوكسي سولفنت</h3>
+                        <p class="text-black text-sm mb-2">Epoxy Solvent</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">دهان إيبوكسي تقليدي مقاوم للمواد الكيميائية</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">160 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20إيبوكسي%20سولفنت" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: رود ماركينج -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-yellow-50 to-yellow-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-road text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">رود ماركينج</h3>
+                        <p class="text-black text-sm mb-2">Road Marking</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">دهانات علامات الطرق عالية المتانة والرؤية</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">140 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20رود%20ماركينج" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: رين ستوب -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-sky-50 to-sky-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-sky-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-cloud-rain text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">رين ستوب</h3>
+                        <p class="text-black text-sm mb-2">Rain Stop</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">عازل مائي مقاوم للأمطار والرطوبة للأسطح الخارجية</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">190 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20رين%20ستوب" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: ترافيك بينت -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-traffic-light text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">ترافيك بينت</h3>
+                        <p class="text-black text-sm mb-2">Traffic Paint</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">دهانات مرورية سريعة الجفاف للطرق والمواقف</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">130 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20ترافيك%20بينت" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product: إيبوكسي زنك فوسفات -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-zinc-50 to-zinc-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-zinc-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">إيبوكسي زنك فوسفات</h3>
+                        <p class="text-black text-sm mb-2">Epoxy Zinc Phosphate</p>
+                        <p class="text-gray-500 text-xs mb-3 line-clamp-2">أساس زنك فوسفات مقاوم للصدأ للحديد والمعادن</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-accent-600 font-bold text-lg">220 ر.س</span>
+                        </div>
+                        <span class="text-green-600 text-sm">متوفر</span>
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20إيبوكسي%20زنك%20فوسفات" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+                <!-- Products will be loaded dynamically from admin dashboard -->
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Load products from admin dashboard (localStorage)
+        document.addEventListener('DOMContentLoaded', function() {
+            initData(); // Initialize data from products-data.js
+            loadCategoryProducts();
+        });
+        
+        function loadCategoryProducts() {
+            const allProducts = getProducts();
+            const floorProducts = allProducts.filter(p => p.category === 'floor');
+            const grid = document.getElementById('products-grid');
+            
+            // If static products already exist in HTML, don't overwrite them
+            const existingProducts = grid.querySelectorAll('.bg-white.rounded-2xl').length;
+            if (existingProducts > 0) {
+                // Static products exist, append dynamic products only
+                if (floorProducts.length > 0) {
+                    const dynamicHTML = floorProducts.map(p => {
+                        const finalPrice = p.discount > 0 ? p.price * (1 - p.discount/100) : p.price;
+                        
+                        return `
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                            ${p.bestSeller ? '<div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs z-10">الأكثر مبيعاً</div>' : ''}
+                            <div class="relative h-48 overflow-hidden bg-gradient-to-br from-${p.color}-50 to-${p.color}-100 flex items-center justify-center">
+                                ${p.image ? `<img src="${p.image}" alt="${p.nameAr}" class="w-full h-full object-cover">` : `<div class="w-20 h-20 bg-${p.color}-500 rounded-full flex items-center justify-center"><i class="fas ${p.icon} text-white text-3xl"></i></div>`}
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold text-primary-900 mb-1">${p.nameAr}</h3>
+                                <p class="text-black text-sm mb-2">${p.nameEn}</p>
+                                ${p.description ? `<p class="text-gray-500 text-xs mb-3 line-clamp-2">${p.description}</p>` : ''}
+                                
+                                <div class="flex items-center gap-2 mb-3">
+                                    ${p.discount > 0 ? `
+                                        <span class="text-gray-400 line-through text-sm">${p.price} ر.س</span>
+                                        <span class="text-accent-600 font-bold text-lg">${finalPrice.toFixed(2)} ر.س</span>
+                                        <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">-${p.discount}%</span>
+                                    ` : `<span class="text-accent-600 font-bold text-lg">${p.price} ر.س</span>`}
+                                </div>
+                                
+                                ${p.quantity === 0 ? 
+                                    '<span class="text-red-500 text-sm font-bold">نفذت الكمية</span>' : 
+                                    `<span class="text-green-600 text-sm">متوفر: ${p.quantity} وحدة</span>`
+                                }
+                                
+                                <a href="https://wa.me/0502250066?text=أريد%20طلب%20${encodeURIComponent(p.nameAr)}" target="_blank" 
+                                   class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                                    <i class="fab fa-whatsapp"></i>اطلب الآن
+                                </a>
+                            </div>
+                        </div>
+                        `;
+                    }).join('');
+                    grid.innerHTML += dynamicHTML;
+                }
+                return;
+            }
+            
+            // No static products, show dynamic or empty message
+            if (floorProducts.length === 0) {
+                grid.innerHTML = `
+                <div class="col-span-full text-center py-12">
+                    <p class="text-gray-500 text-lg">لا توجد منتجات مضافة من لوحة التحكم</p>
+                    <a href="admin-dashboard.html" class="inline-block mt-4 bg-accent-500 text-white px-6 py-3 rounded-lg hover:bg-accent-600">
+                        <i class="fas fa-plus ml-2"></i>إضافة منتجات من لوحة التحكم
+                    </a>
+                </div>`;
+                return;
+            }
+            
+            grid.innerHTML = floorProducts.map(p => {
+                const finalPrice = p.discount > 0 ? p.price * (1 - p.discount/100) : p.price;
+                
+                return `
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift relative">
+                    ${p.bestSeller ? '<div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs z-10">الأكثر مبيعاً</div>' : ''}
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-${p.color}-50 to-${p.color}-100 flex items-center justify-center">
+                        ${p.image ? `<img src="${p.image}" alt="${p.nameAr}" class="w-full h-full object-cover">` : `<div class="w-20 h-20 bg-${p.color}-500 rounded-full flex items-center justify-center"><i class="fas ${p.icon} text-white text-3xl"></i></div>`}
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-primary-900 mb-1">${p.nameAr}</h3>
+                        <p class="text-black text-sm mb-2">${p.nameEn}</p>
+                        ${p.description ? `<p class="text-gray-500 text-xs mb-3 line-clamp-2">${p.description}</p>` : ''}
+                        
+                        <div class="flex items-center gap-2 mb-3">
+                            ${p.discount > 0 ? `
+                                <span class="text-gray-400 line-through text-sm">${p.price} ر.س</span>
+                                <span class="text-accent-600 font-bold text-lg">${finalPrice.toFixed(2)} ر.س</span>
+                                <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">-${p.discount}%</span>
+                            ` : `<span class="text-accent-600 font-bold text-lg">${p.price} ر.س</span>`}
+                        </div>
+                        
+                        ${p.quantity === 0 ? 
+                            '<span class="text-red-500 text-sm font-bold">نفذت الكمية</span>' : 
+                            `<span class="text-green-600 text-sm">متوفر: ${p.quantity} وحدة</span>`
+                        }
+                        
+                        <a href="https://wa.me/0502250066?text=أريد%20طلب%20${encodeURIComponent(p.nameAr)}" target="_blank" 
+                           class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i>اطلب الآن
+                        </a>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+    </script>
+    <section class="section-padding bg-yellow-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mt-2">لماذا تختار دهاناتنا للأرضيات؟</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-2xl bg-white shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-shield-alt text-white text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-primary-900 mb-3">متانة عالية</h3>
+                    <p class="text-black">تتحمل الاستخدام اليومي والحركة المستمرة</p>
+                </div>
+                <div class="text-center p-8 rounded-2xl bg-white shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-tint text-white text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-primary-900 mb-3">مقاومة للماء</h3>
+                    <p class="text-black">حماية ممتازة من الماء والرطوبة</p>
+                </div>
+                <div class="text-center p-8 rounded-2xl bg-white shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-broom text-white text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-primary-900 mb-3">سهلة التنظيف</h3>
+                    <p class="text-black">سطح أملس يسهل التنظيف والصيانة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding bg-yellow-400">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">جاهز للتواصل؟</h2>
+            <p class="text-xl text-black mb-8">احصل على عرض سعر مجاني لدهانات الأرضيات</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/0502250066?text=أريد%20دهانات%20أرضيات" target="_blank" class="bg-gray-900 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:bg-gray-800"><i class="fab fa-whatsapp text-2xl"></i>تواصل عبر واتساب</a>
+                <a href="contact.html" class="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 flex items-center justify-center gap-3"><i class="fas fa-phone"></i>اتصل بنا</a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="pic/logo.png" alt="دهانات الريم" class="w-12 h-12 rounded-full object-cover">
+                        <span class="text-xl font-bold">دهانات الريم</span>
+                    </div>
+                    <p class="text-white">متخصصون في دهانات عالية الجودة للسوق السعودي منذ أكثر من 15 عاماً</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-white hover:text-accent-500">الرئيسية</a></li>
+                        <li><a href="index.html#products" class="text-white hover:text-accent-500">المنتجات</a></li>
+                        <li><a href="contact.html" class="text-white hover:text-accent-500">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">المنتجات</h4>
+                    <ul class="space-y-2">
+                        <li><a href="interior-paints.html" class="text-white hover:text-accent-500">دهانات داخلية</a></li>
+                        <li><a href="exterior-paints.html" class="text-white hover:text-accent-500">دهانات خارجية</a></li>
+                        <li><a href="decorative-paints.html" class="text-white hover:text-accent-500">دهانات ديكورية</a></li>
+                        <li><a href="water-paints.html" class="text-white hover:text-accent-500">دهانات مائية</a></li>
+                        <li><a href="industrial-paints.html" class="text-white hover:text-accent-500">دهانات صناعية</a></li>
+                        <li><a href="floor-paints.html" class="text-white hover:text-accent-500">دهانات ارضيات</a></li>
+                        <li><a href="oil-paints.html" class="text-white hover:text-accent-500">دهانات زيتية</a></li>
+                        <li><a href="contractors.html" class="text-white hover:text-accent-500">خدمات المقاولين</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">تواصل معنا</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-phone text-accent-500"></i><span class="text-white">0552297933</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone text-accent-500"></i><span class="text-white">0502250066 (المبيعات)</span></li>
+                        <li class="flex items-center gap-3"><i class="fab fa-whatsapp text-accent-500"></i><span class="text-white">0502250066</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-accent-500"></i><span class="text-white">alreempaints@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white">© 2024 دهانات الريم. جميع الحقوق محفوظة</p>
+                <div class="flex gap-4">
+                    <a href="https://x.com/alreempaints" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent-500"><i class="fab fa-x"></i></a>
+                    <a href="https://www.youtube.com/channel/UC1d7MoakkURynCWYzbjFKzg" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent-500"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/alreempaints/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent-500"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/0502250066" target="_blank" class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/0502250066" target="_blank" class="fixed bottom-8 left-8 z-50 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 floating-whatsapp"><i class="fab fa-whatsapp text-3xl"></i></a>
+    <style>
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .floating-whatsapp { animation: float 3s ease-in-out infinite; }
+    </style>
+</body>
+</html>

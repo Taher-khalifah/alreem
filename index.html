@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دهانات الريم | أجود أنواع الدهانات في السعودية</title>
+    <meta name="description" content="دهانات الريم - متخصصون في بيع الدهانات الداخلية والخارجية والديكورية في السوق السعودي. جودة عالية، أسعار تنافسية، ضمان طويل.">
+    <meta name="keywords" content="دهانات داخلية, دهانات خارجية, دهانات ديكورية, أفضل دهانات في السعودية, دهانات الريم">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 
+                        primary: { 900: '#1a365d', 800: '#1e40af', 700: '#1d4ed8' }, 
+                        accent: { 500: '#C9A227', 600: '#B8922A' },
+                        yellow: { 50: '#FEF9E7', 100: '#FDF3CF', 200: '#FBE8A0', 300: '#F8DC6F', 400: '#F5D03E', 500: '#C9A227', 600: '#B8922A', 700: '#8B6914' }
+                    },
+                    fontFamily: { arabic: ['Cairo', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <!-- Maintenance Mode Check - Must be in head to redirect before page loads -->
+    <script>
+        (function() {
+            const maintenanceMode = localStorage.getItem('maintenance_mode') === 'true';
+            const referrer = document.referrer;
+            const isFromAdmin = referrer && referrer.includes('admin-dashboard.html');
+            
+            if (maintenanceMode && !isFromAdmin && !window.location.href.includes('maintenance.html')) {
+                window.location.replace('maintenance.html');
+            }
+        })();
+    </script>
+    
+    <style>
+        * { font-family: 'Cairo', sans-serif; }
+        html { scroll-behavior: smooth; }
+        
+        .header-gradient-bar {
+            background: linear-gradient(90deg, #1a365d 0%, #1e40af 15%, #C9A227 35%, #f4d03f 50%, #C9A227 65%, #1e40af 85%, #1a365d 100%);
+        }
+        
+        /* Hero Section with Background Image */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* Overlay for better text readability - Yellow/Gold theme */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.92) 0%, rgba(139, 105, 20, 0.88) 100%);
+        }
+        
+        .hover-lift { transition: all 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+        .btn-primary { background: linear-gradient(135deg, #C9A227 0%, #B8922A 100%); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201, 162, 39, 0.4); }
+        .gradient-text { background: linear-gradient(135deg, #C9A227 0%, #f4d03f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-padding { padding: 80px 0; }
+        @media (max-width: 768px) { .section-padding { padding: 50px 0; } }
+        
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #C9A227; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+        
+        /* Logo Text Gradient */
+        .logo-text {
+            background: linear-gradient(135deg, #1a365d 0%, #C9A227 50%, #f4d03f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Animated Slideshow Styles */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        
+        .slideshow-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: fadeSlide 12s infinite;
+        }
+        
+        .slideshow-image:nth-child(1) { animation-delay: 0s; }
+        .slideshow-image:nth-child(2) { animation-delay: 3s; }
+        .slideshow-image:nth-child(3) { animation-delay: 6s; }
+        .slideshow-image:nth-child(4) { animation-delay: 9s; }
+        
+        @keyframes fadeSlide {
+            0%, 25% { opacity: 0; transform: scale(1.1); }
+            5%, 20% { opacity: 1; transform: scale(1); }
+            30%, 100% { opacity: 0; transform: scale(1.1); }
+        }
+        
+        /* Product Image */
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="font-arabic bg-white" x-data="{ mobileMenuOpen: false }">
+
+<nav class="w-full bg-white shadow-lg" dir="rtl">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- الروابط (يمين) -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-black hover:text-yellow-600 font-medium">الرئيسية</a>
+        <a href="index.html#products" class="text-black hover:text-yellow-600 font-medium">المنتجات</a>
+        <a href="contact.html" class="text-black hover:text-yellow-600 font-medium">تواصل معنا</a>
+      </div>
+
+      <!-- اللوقو بالنص -->
+      <div class="flex justify-center flex-1">
+        <a href="index.html">
+          <img src="pic/logo.png" alt="دهانات الريم"
+               class="h-16 object-contain">
+        </a>
+      </div>
+
+      <!-- زر واتساب (يسار) -->
+      <div class="hidden md:flex items-center">
+        <a href="https://wa.me/0502250066" target="_blank"
+           class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2">
+           <i class="fab fa-whatsapp"></i>
+           اطلب عرض سعر
+        </a>
+      </div>
+
+      <!-- زر الجوال -->
+      <button class="md:hidden text-black text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+  <!-- شريط الألوان المتحرك -->
+  <div class="h-3 w-full overflow-hidden">
+    <div class="animated-gradient-line w-full h-full"></div>
+  </div>
+
+  <style>
+    .animated-gradient-line {
+      background: linear-gradient(90deg, #dc2626 0%, #fbbf24 25%, #22c55e 50%, #06b6d4 75%, #dc2626 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: 100% 0; }
+      50% { background-position: 0 0; }
+      100% { background-position: 100% 0; }
+    }
+  </style>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image: url('pic/background.png'); padding-top: 80px;">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-right">
+                    <div class="inline-block bg-yellow-500/20 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm mb-6">
+                        <i class="fas fa-check-circle text-white ml-2"></i>ضمان الجودة حتى 10 سنوات
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">ألوان تعكس ذوقك…<span class="block gradient-text">وجودة تدوم لسنوات</span></h1>
+                    <p class="text-xl text-white/80 mb-8 max-w-xl mx-auto lg:mx-0">نقدم لك أجود أنواع الدهانات الداخلية والخارجية والديكورية بأسعار تنافسية وضمان طويل!</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<a href="https://wa.me/0502250066?text=أريد%20طلب%20عرض%20سعر" target="_blank" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3"><i class="fab fa-whatsapp text-2xl"></i>اطلب عرض سعر</a>
+                        <a href="#products" class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg border-2 border-white/30 hover:bg-white/20 transition-all flex items-center justify-center gap-3"><i class="fas fa-palette"></i>تصفح المنتجات</a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20">
+                        <div><div class="text-3xl font-bold text-white">+15</div><div class="text-white/70 text-sm">سنوات خبرة</div></div>
+                        <div><div class="text-3xl font-bold text-white">+5000</div><div class="text-white/70 text-sm">مشروع منجز</div></div>
+                        <div><div class="text-3xl font-bold text-white">+98%</div><div class="text-white/70 text-sm">رضا العملاء</div></div>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <div class="relative">
+                        <div class="slideshow-container h-[500px]">
+                            <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&h=700&fit=crop" alt="دهانات الريم" class="slideshow-image rounded-2xl shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&h=700&fit=crop" alt="دهانات داخلية" class="slideshow-image rounded-2xl shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=700&fit=crop" alt="دهانات خارجية" class="slideshow-image rounded-2xl shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&h=700&fit=crop" alt="دهانات ديكورية" class="slideshow-image rounded-2xl shadow-2xl">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center"><i class="fab fa-whatsapp text-green-500 text-xl"></i></div>
+                                <div><p class="text-sm text-black">تواصل معنا</p><p class="font-bold text-primary-900">على الواتساب</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 right-0 left-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full"><path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#fbbf24"/></svg>
+        </div>
+    </section>
+
+    <!-- Best Selling Products - Horizontal Scroll -->
+    <section class="section-padding bg-yellow-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-accent-600 font-semibold text-lg">الأكثر مبيعاً</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mt-2">أفضل الدهانات مبيعاً</h2>
+                <p class="text-black mt-4 max-w-2xl mx-auto">اكتشف الدهانات الأكثر طلباً من عملائنا</p>
+            </div>
+            
+            <!-- Horizontal Scroll Container -->
+            <div class="relative">
+                <!-- Scroll Buttons -->
+                <button onclick="document.getElementById('best-sellers-scroll').scrollBy({left: -400, behavior: 'smooth'})" 
+                        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-accent-500 hover:text-white transition-all hidden md:flex">
+                    <i class="fas fa-chevron-left text-xl"></i>
+                </button>
+                <button onclick="document.getElementById('best-sellers-scroll').scrollBy({left: 400, behavior: 'smooth'})" 
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-accent-500 hover:text-white transition-all hidden md:flex">
+                    <i class="fas fa-chevron-right text-xl"></i>
+                </button>
+                
+                <!-- Scrollable Container -->
+                <div id="best-sellers-scroll" class="flex gap-6 overflow-x-auto pb-4 px-4 snap-x snap-mandatory scrollbar-hide" style="scrollbar-width: none; -ms-overflow-style: none;">
+                    
+                    <!-- Product 1: بيانكو مَت -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-tint text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">بيانكو مَت</h3>
+                            <p class="text-black text-sm mb-3">Bianco Matt</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">دهان مائي</span>
+                                <a href="water-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: إيبوكسي ميتاليك -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">إيبوكسي ميتاليك</h3>
+                            <p class="text-black text-sm mb-3">Metallic Epoxy</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">أرضيات</span>
+                                <a href="floor-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: لازورد -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-gem text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">لازورد</h3>
+                            <p class="text-black text-sm mb-3">Lazaward</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">ديكوري</span>
+                                <a href="decorative-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: إيبوكسي سيلر -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-cyan-50 to-cyan-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-cyan-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">إيبوكسي سيلر</h3>
+                            <p class="text-black text-sm mb-3">Epoxy Sealer</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">أرضيات</span>
+                                <a href="floor-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5: جالاكسي -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-pink-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">جالاكسي</h3>
+                            <p class="text-black text-sm mb-3">Galaxy</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">ديكوري</span>
+                                <a href="decorative-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6: فلورا مت -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-leaf text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">فلورا مت</h3>
+                            <p class="text-black text-sm mb-3">Flora Matt</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">دهان مائي</span>
+                                <a href="water-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7: كونكريتا -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-gray-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-cube text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">كونكريتا</h3>
+                            <p class="text-black text-sm mb-3">Concreta</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">ديكوري</span>
+                                <a href="decorative-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8: بولي كريت -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-indigo-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-cube text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">بولي كريت</h3>
+                            <p class="text-black text-sm mb-3">Polycrete</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">أرضيات</span>
+                                <a href="floor-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 9: ألترا مَت إملشن -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-gray-700 rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">ألترا مَت إملشن</h3>
+                            <p class="text-black text-sm mb-3">Ultra Matt Emulsion</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">دهان مائي</span>
+                                <a href="water-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 10: ستوكو -->
+                    <div class="min-w-[280px] md:min-w-[calc(25%-18px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md hover-lift border border-gray-100">
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-stone-50 to-stone-100 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-stone-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-layer-group text-white text-3xl"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">الأكثر مبيعاً</div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-primary-900 mb-1">ستوكو</h3>
+                            <p class="text-black text-sm mb-3">Stucco</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-accent-600 font-bold">ديكوري</span>
+                                <a href="decorative-paints.html" class="text-primary-900 hover:text-accent-500"><i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="flex justify-center gap-2 mt-6">
+                <div class="w-2 h-2 rounded-full bg-accent-500"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-padding bg-yellow-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-accent-600 font-semibold text-lg">منتجاتنا المميزة</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mt-2">مجموعة دهانات الريم</h2>
+                <p class="text-black mt-4 max-w-2xl mx-auto">نقدم لك تشكيلة واسعة من الدهانات عالية الجودة تناسب جميع الاحتياجات</p>
+            </div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="interior-paints.html" class="hover-lift bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=400&h=300&fit=crop" alt="دهانات داخلية" class="product-image">
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-primary-900 mb-2">الدهانات الداخلية</h3><p class="text-black text-sm mb-4">دهانات آمنة وصديقة للبيئة لمنزلك</p><span class="text-accent-600 font-semibold flex items-center gap-2">اعرف المزيد <i class="fas fa-arrow-left"></i></span></div>
+                </a>
+                <a href="exterior-paints.html" class="hover-lift bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" alt="دهانات خارجية" class="product-image">
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-primary-900 mb-2">الدهانات الخارجية</h3><p class="text-black text-sm mb-4">مقاومة للحرارة والعوامل الجوية</p><span class="text-accent-600 font-semibold flex items-center gap-2">اعرف المزيد <i class="fas fa-arrow-left"></i></span></div>
+                </a>
+                <a href="decorative-paints.html" class="hover-lift bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=400&h=300&fit=crop" alt="دهانات ديكورية" class="product-image">
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-primary-900 mb-2">الدهانات الديكورية</h3><p class="text-black text-sm mb-4">لمسات فنية فاخرة لمنزلك</p><span class="text-accent-600 font-semibold flex items-center gap-2">اعرف المزيد <i class="fas fa-arrow-left"></i></span></div>
+                </a>
+<a href="contractors.html" class="hover-lift bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop" alt="خدمات المقاولين" class="product-image">
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-primary-900 mb-2">خدمات المقاولين</h3><p class="text-black text-sm mb-4">عروض خاصة للمشاريع الكبرى</p><span class="text-accent-600 font-semibold flex items-center gap-2">اعرف المزيد <i class="fas fa-arrow-left"></i></span></div>
+                </a>
+                <a href="water-paints.html" class="hover-lift bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400&h=300&fit=crop" alt="دهانات مائية" class="product-image">
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-primary-900 mb-2">دهانات مائية</h3><p class="text-black text-sm mb-4">دهانات صديقة للبيئة سهلة التنظيف</p><span class="text-accent-600 font-semibold flex items-center gap-2">اعرف المزيد <i class="fas fa-arrow-left"></i></span></div>
+                </a>
+                <a href="industrial-paints.html" class="hover-lift bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400&h=300&fit=crop" alt="الدهانات الصناعية" class="product-image">
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-primary-900 mb-2">الدهانات الصناعية</h3><p class="text-black text-sm mb-4">حماية قوية للمباني والمعدات</p><span class="text-accent-600 font-semibold flex items-center gap-2">اعرف المزيد <i class="fas fa-arrow-left"></i></span></div>
+                </a>
+                <a href="floor-paints.html" class="hover-lift bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="دهانات الارضيات" class="product-image">
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-primary-900 mb-2">دهانات الارضيات</h3><p class="text-black text-sm mb-4">دهانات متينة للأرضيات</p><span class="text-accent-600 font-semibold flex items-center gap-2">اعرف المزيد <i class="fas fa-arrow-left"></i></span></div>
+                </a>
+<a href="oil-paints.html" class="hover-lift bg-white rounded-2xl overflow-hidden shadow-md group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400&h=300&fit=crop" alt="دهانات زيتية" class="product-image">
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-primary-900 mb-2">دهانات زيتية</h3><p class="text-black text-sm mb-4">لمعان يدوم لسنوات</p><span class="text-accent-600 font-semibold flex items-center gap-2">اعرف المزيد <i class="fas fa-arrow-left"></i></span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="section-padding bg-yellow-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-accent-600 font-semibold text-lg">لماذا تختار دهانات الريم؟</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mt-2">نتميز عن غيرنا</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-2xl bg-white shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-award text-white text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-primary-900 mb-3">جودة عالية</h3><p class="text-black">نستخدم أفضل المواد الخام والتقنيات الحديثة لضمان نتائج تدوم لسنوات</p>
+                </div>
+                <div class="text-center p-8 rounded-2xl bg-white shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-tags text-white text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-primary-900 mb-3">أسعار تنافسية</h3><p class="text-black">نقدم أفضل الأسعار في السوق السعودي مع ضمان الجودة العالية</p>
+                </div>
+                <div class="text-center p-8 rounded-2xl bg-white shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-shield-alt text-white text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-primary-900 mb-3">ضمان طويل</h3><p class="text-black">نقدم ضمان حتى 10 سنوات على جميع منتجاتنا</p>
+                </div>
+                <div class="text-center p-8 rounded-2xl bg-white shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-clock text-white text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-primary-900 mb-3">سرعة تنفيذ</h3><p class="text-black">نلتزم بالمواعيد وننجز المشاريع في الوقت المحدد</p>
+                </div>
+                <div class="text-center p-8 rounded-2xl bg-white shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-palette text-white text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-primary-900 mb-3">استشارات مجانية</h3><p class="text-black">فريق متخصص يقدم لك النصائح المجانية لاختيار الألوان المناسبة</p>
+                </div>
+                <div class="text-center p-8 rounded-2xl bg-white shadow-md hover-lift">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-truck text-white text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-primary-900 mb-3">توصيل سريع</h3><p class="text-black">نوفر خدمة التوصيل لجميع مناطق المملكة بسرعة وكفاءة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section-padding bg-yellow-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-accent-600 font-semibold text-lg">آراء عملائنا</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mt-2">ماذا يقول عملاؤنا</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-black mb-6">"تجربة رائعة مع دهانات الريم. الجودة ممتازة والفريق محترف جداً. أنصح الجميع بالتعامل معهم"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold">ع</div>
+                        <div><p class="font-bold text-primary-900">أحمد محمد</p><p class="text-sm text-black">الرياض</p></div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-black mb-6">"دهانات خارجية ممتازة تتحمل حرارة الصيف السعودية. السعر مناسب والجودة عالية جداً"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold">س</div>
+                        <div><p class="font-bold text-primary-900">سعود الغامدي</p><p class="text-sm text-black">جدة</p></div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-black mb-6">"الديكور الداخلي أصبح رائعاً بفضل دهانات الريم. شكراً لفريق العمل على الاحترافية"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold">خ</div>
+                        <div><p class="font-bold text-primary-900">خالد العمراني</p><p class="text-sm text-black">الدمام</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-yellow-400">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">جاهز لتجميل منزلك؟</h2>
+            <p class="text-xl text-black mb-8">احصل على عرض سعر مجاني الآن وخض تجربة فريدة مع دهانات الريم</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="https://wa.me/0502250066?text=أريد%20طلب%20عرض%20سعر" target="_blank" class="bg-gray-900 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:bg-gray-800 transition-all"><i class="fab fa-whatsapp text-2xl"></i>تواصل عبر واتساب</a>
+                <a href="contact.html" class="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all flex items-center justify-center gap-3"><i class="fas fa-phone"></i>اتصل بنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="pic/logo.png" alt="دهانات الريم" class="w-12 h-12 rounded-full object-cover">
+                        <span class="text-xl font-bold">دهانات الريم</span>
+                    </div>
+                    <p class="text-white">متخصصون في دهانات عالية الجودة للسوق السعودي منذ أكثر من 15 عاماً</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+<li><a href="index.html" class="text-white hover:text-accent-500">الرئيسية</a></li>
+                        <li><a href="#products" class="text-white hover:text-accent-500">المنتجات</a></li>
+                        <li><a href="contact.html" class="text-white hover:text-accent-500">تواصل معنا</a></li>
+                    </ul>
+                </div>
+<div>
+                    <h4 class="font-bold text-lg mb-4">المنتجات</h4>
+                    <ul class="space-y-2">
+                        <li><a href="interior-paints.html" class="text-white hover:text-accent-500">دهانات داخلية</a></li>
+                        <li><a href="exterior-paints.html" class="text-white hover:text-accent-500">دهانات خارجية</a></li>
+                        <li><a href="decorative-paints.html" class="text-white hover:text-accent-500">دهانات ديكورية</a></li>
+                        <li><a href="water-paints.html" class="text-white hover:text-accent-500">دهانات مائية</a></li>
+                        <li><a href="industrial-paints.html" class="text-white hover:text-accent-500">دهانات صناعية</a></li>
+                        <li><a href="floor-paints.html" class="text-white hover:text-accent-500">دهانات ارضيات</a></li>
+                        <li><a href="oil-paints.html" class="text-white hover:text-accent-500">دهانات زيتية</a></li>
+                        <li><a href="contractors.html" class="text-white hover:text-accent-500">خدمات المقاولين</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">تواصل معنا</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-phone text-accent-500"></i><span class="text-white">0552297933</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone text-accent-500"></i><span class="text-white">0502250066 (المبيعات)</span></li>
+                        <li class="flex items-center gap-3"><i class="fab fa-whatsapp text-accent-500"></i><span class="text-white">0502250066</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-accent-500"></i><span class="text-white">alreempaints@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white">© 2024 دهانات الريم. جميع الحقوق محفوظة</p>
+                <div class="flex gap-4">
+                    <a href="https://x.com/alreempaints" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent-500 transition-all"><i class="fab fa-x text-white"></i></a>
+                    <a href="https://www.youtube.com/channel/UC1d7MoakkURynCWYzbjFKzg" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent-500 transition-all"><i class="fab fa-youtube text-white"></i></a>
+                    <a href="https://www.instagram.com/alreempaints/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent-500 transition-all"><i class="fab fa-instagram text-white"></i></a>
+                    <a href="https://wa.me/0502250066" target="_blank" class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-all"><i class="fab fa-whatsapp text-white"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/0502250066" target="_blank" class="fixed bottom-8 left-8 z-50 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 transition-all floating-whatsapp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+    
+    <style>
+        @keyframes float { 
+            0%, 100% { transform: translateY(0); } 
+            50% { transform: translateY(-10px); } 
+        }
+        .floating-whatsapp { 
+            animation: float 3s ease-in-out infinite; 
+        }
+    </style>
+    <script src="firebase.js"></script>
+</body>
+</html>

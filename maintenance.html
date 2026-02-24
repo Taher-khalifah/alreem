@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع تحت الصيانة | دهانات الريم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { font-family: 'Cairo', sans-serif; }
+        
+        .maintenance-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+        
+        .gear-spin {
+            animation: spin 4s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .gear-spin-reverse {
+            animation: spin-reverse 3s linear infinite;
+        }
+        
+        @keyframes spin-reverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-primary-900 via-primary-800 to-accent-600 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 max-w-lg w-full text-center">
+        <!-- Animated Gears -->
+        <div class="flex justify-center items-center gap-4 mb-8">
+            <i class="fas fa-cog text-6xl text-orange-500 gear-spin"></i>
+            <i class="fas fa-cog text-4xl text-yellow-500 gear-spin-reverse mt-6"></i>
+            <i class="fas fa-wrench text-5xl text-gray-600 maintenance-animation"></i>
+        </div>
+        
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+            الموقع تحت الصيانة
+        </h1>
+        
+        <!-- Custom Message -->
+        <p id="maintenance-message" class="text-gray-600 text-lg mb-8 leading-relaxed">
+            نحن نعمل على تحسين الموقع لنقدم لكم تجربة أفضل. نعتذر عن الإزعاج ونعدكم بالعودة قريباً.
+        </p>
+        
+        <!-- Contact Info -->
+        <div class="bg-yellow-50 rounded-2xl p-6 mb-6">
+            <p class="text-gray-700 mb-4">للاستفسارات العاجلة، يرجى التواصل معنا:</p>
+            <div class="flex flex-col gap-3">
+                <a href="https://wa.me/0502250066" class="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl transition-colors">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>واتساب: 0502250066</span>
+                </a>
+                <a href="tel:0552297933" class="flex items-center justify-center gap-3 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-xl transition-colors">
+                    <i class="fas fa-phone text-xl"></i>
+                    <span>هاتف: 0552297933</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Logo -->
+        <div class="flex items-center justify-center gap-3 opacity-50">
+            <img src="pic/logo.png" alt="دهانات الريم" class="w-10 h-10 rounded-full">
+            <span class="text-primary-900 font-bold">دهانات الريم</span>
+        </div>
+        
+        <!-- Admin Access (Hidden) -->
+        <div class="mt-8 pt-6 border-t border-gray-200">
+            <a href="admin-dashboard.html" class="text-sm text-gray-400 hover:text-accent-500 transition-colors">
+                <i class="fas fa-lock ml-1"></i>
+                دخول المشرفين
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Load custom maintenance message if set
+        document.addEventListener('DOMContentLoaded', function() {
+            const customMessage = localStorage.getItem('maintenance_message');
+            if (customMessage) {
+                document.getElementById('maintenance-message').textContent = customMessage;
+            }
+        });
+    </script>
+</body>
+</html>
